@@ -1,0 +1,75 @@
+<wxs module="filter" src="../../filter/filter.wxs"></wxs>
+<!--pages/shopCar/shopCar.wxml-->
+<view class='shopcar'>
+  <view class='info'>
+    <view class='title'>
+      <text>购物车</text>
+    </view>
+    <view class='info-list'>
+      <view class='base-info base-info-first'>
+        <text>桌号:{{payTableNum}}</text>
+        <text class='right'>人数:{{userNumber}}</text>
+      </view>
+      <!-- <view class='base-info base-info-first'>
+        <text>备注:</text>
+      </view> -->
+      <!-- <view class='right-btn' bindtap='changeInfo'>
+        <text class='iconfont icon-bianjixiugai' style='font-size:48rpx;color:#999;'></text>
+        <text>修改</text>
+      </view> -->
+    </view>
+    <view class='info-list'>
+      <view class='base-info'>
+        <text class='no-margin'>购物车里有{{carLists.length}}个菜品，合计:</text>
+        <text class='red'>￥{{filter._toFixed(total,2)}}</text>
+      </view>
+      <view class='right-btn' bindtap='clearCar'>
+        <text class='iconfont icon-lajitongshanchu' style='font-size:48rpx;color:#999;'></text>
+        <text>清空</text>
+      </view>
+    </view>
+  </view>
+  <view class='list-container'>
+    <view class='list-box clearfix' wx:if="{{carLists.length>0}}">
+      <view class='list-main' wx:for="{{carLists}}" wx:for-item="product" wx:for-index='index'>
+        <view class='user-info'>
+          <text wx:if="{{product.picture==''}}" class='iconfont icon-zanwushuju nopic'></text>
+          <image wx:if="{{product.picture!=''}}" src='{{product.picture}}'></image>
+          <!-- <text>{{product.userInfo}}</text> -->
+        </view>
+        <view class='product'>
+          <text>{{product.goodsName}}</text>
+          <text class='price'>￥{{filter._toFixed(product.goodsPrice,2)}}</text>
+        </view>
+        <view class='add-or-minus'>
+          <text class='iconfont icon-jian' style='font-size:28rpx;color:#ff2856;' bindtap='minus' data-id='{{index}}'></text>
+          <text class='num'>{{product.number}}</text>
+          <text class='iconfont icon-jia' style='font-size:28rpx;color:#fff;' bindtap='add' data-id='{{index}}'></text>
+        </view>
+      </view>
+    </view>
+    <view class='empty' wx:if="{{carLists.length<=0}}">
+      <text class='iconfont icon-zanwushuju' style='color:#999;font-size:400rpx;'></text>
+      <text>购物车空空如也，快去点菜吧！</text>
+    </view>
+  </view>
+  <text class='submit-btn' bindtap='submitOrder' wx:if="{{carLists.length>0}}">下单</text>
+  <text class='common-info'>芒极科技提供技术支持</text>
+</view>
+
+<!-- 底部导航 -->
+<!-- <view class='bottom-nav'>
+  <view class='nav nav-50' catchtap='goToIndex'>
+    <text class='iconfont icon-xuexishuben' style='color:#666;font-size:36rpx;'></text>
+    <text>继续点菜</text>
+  </view>
+  <view class='nav nav-50' bindtap='submitOrder'>
+    <text class='iconfont icon-gou' style='color:#ff2856;font-size:36rpx;'></text>
+    <text class='red'>下单</text>
+  </view>
+</view> -->
+<!-- 头部 -->
+<!-- <view class='header'>
+  <text class='goback iconfont icon-zuo' bindtap='goToIndex'></text>
+  <text>{{shopName}}</text>
+</view> -->

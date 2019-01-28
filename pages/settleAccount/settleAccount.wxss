@@ -1,0 +1,89 @@
+/* pages/settleAccount/settleAccount.wxss */
+.main{
+  font-size: 28rpx;
+  margin: 20rpx;
+  border-radius: 40rpx;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 20rpx;
+  margin-bottom: 40rpx;
+}
+.order{
+  text-align: center;
+}
+.desk{
+  display: block;
+  font-size: 36rpx;
+  margin-bottom: 10rpx;
+}
+.money{
+  font-size: 60rpx;
+}
+.detail{
+  border-top: 16rpx dotted #eee;
+  margin-top: 20rpx;
+  padding: 20rpx 0;
+}
+.detail .right{
+  float: right;
+}
+.detail>view{
+  border-top: 1rpx solid #eee;
+  min-height: 80rpx;
+  line-height: 80rpx;
+}
+.detail>view:first-child{
+  border: 0;
+}
+.main .red{
+  color: #ff2856;
+}
+.footer{
+  text-align: center;
+  font-size: 32rpx;
+  color: #999;
+  padding-bottom: 112rpx;
+}
+.footer text{
+  display: block;
+  margin-bottom: 10rpx;
+}
+.bigfont{
+  font-size: 36rpx;
+}
+.orderdetail{
+  border: 1rpx solid #ff2856;
+  padding: 0rpx 20rpx;
+  line-height: 48rpx;
+  border-radius: 8rpx;
+  margin-top: 10rpx;
+}
+.orderdetail .iconfont{
+  vertical-align: middle;
+}
+.list>view{
+  position: relative;
+  text-align: center;
+  color: #999;
+  border-top: 1rpx dashed #eee;
+}
+.list>view:first-child{
+  border: 0;
+}
+.left{
+  position: absolute;
+  left: 0;
+}
+.list .right{
+  position: absolute;
+  right: 0;
+}
+.bottom-nav image{
+  width: 42rpx;
+  height: 42rpx;
+  display: block;
+  margin: 0 auto;
+}
+.bottom-nav .nav text{
+  color: #dcdcdc;
+}

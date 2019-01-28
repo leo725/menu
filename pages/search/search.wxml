@@ -1,0 +1,27 @@
+<wxs module="filter" src="../../filter/filter.wxs"></wxs>
+<!--pages/search/search.wxml-->
+<view class='search'>
+  <view class='search-box'>
+    <input class='search-input' placeholder='请输入菜名搜索' focus="true" bindconfirm='getSearch' confirm-type='search'></input>
+    <text class='iconfont icon-sousuo'></text>
+  </view>
+  <view class='mainbox'>
+    <view wx:for='{{searchList}}' wx:for-item="goods" wx:for-index="firstIndex">
+      <view class='itembox' wx:for='{{goods.goods}}' wx:for-item='item' wx:for-index="index" bindtap='goToDetail' data-firstIndex='{{firstIndex}}' data-index="{{index}}">
+        <image src='{{item.picture}}'></image>
+        <!-- <text wx:if="{{item.picture==''}}" class='nopic iconfont'></text> -->
+        <view>
+          <text class='title'>{{item.name}}</text>
+          <text class='price'>￥{{filter._toFixed(item.price,2)}}</text>
+          <view class='addCar'>
+            <text class='iconfont icon-jian' catchtap='minus' data-firstIndex='{{firstIndex}}' data-index="{{index}}"></text>
+            <text class='num'>{{item.num}}</text>
+            <text class='iconfont icon-jia' catchtap='add' data-firstIndex='{{firstIndex}}' data-index="{{index}}"></text>
+            <text class='addCar-btn' catchtap='addCar' data-firstIndex='{{firstIndex}}' data-index="{{index}}">加入购物车</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <text class='common-info'>芒极科技提供技术支持</text>
+</view>

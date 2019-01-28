@@ -1,0 +1,49 @@
+/* pages/userInfo/userInfo.wxss */
+.userinfo{
+  font-size: 28rpx;
+}
+.info{
+  padding-top: 60rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #666;
+}
+.info image{
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin: 0 auto;
+   margin-bottom: 24rpx;
+}
+.main{
+  height: 120rpx;
+  padding: 0 24rpx;
+  color: #b0b0b0;
+  line-height: 120rpx;
+  overflow: hidden;
+}
+.main>text{
+  color: #4a4a4a;
+  font-size: 34rpx;
+}
+.right{
+  float: right;
+}
+.iconf-you{
+  color: #939393;
+  display: inline-block;
+  margin-left: 24rpx;
+}
+.radio{
+  margin-left: 24rpx;
+}
+.radio:first-child{
+  margin-left: 0;
+}
+.right .iconfont{
+  vertical-align: middle;
+}
+.main text{
+  line-height: 60rpx;
+}

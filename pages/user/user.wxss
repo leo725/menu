@@ -1,0 +1,76 @@
+/* pages/user/user.wxss */
+.user{
+  
+}
+.info{
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  padding-top: 68rpx;
+  padding-bottom: 38rpx;
+  background-color: #fff;
+}
+.info image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-bottom: 24rpx;
+}
+.info .name{
+  font-size: 32rpx;
+  color: #666666;
+  display: block;
+  text-align: center;
+  margin-bottom: 23rpx;
+}
+navigator{
+  font-size: 28rpx;
+}
+.font-black{
+  color: #333;
+  font-size: 24rpx;
+  display: inline-block;
+}
+.font-black.line{
+  text-decoration: underline;
+}
+.info navigator{
+  display: inline-block;
+}
+.aside{
+  margin-top: 40rpx;
+  background-color: #fff;
+  box-shadow: 0px 2px 20px 0px rgba(241, 241, 241, 0.75);
+}
+.aside>view{
+  height: 112rpx;
+  line-height: 52rpx;
+  padding: 30rpx 24rpx;
+  color: #4a4a4a;
+  font-size: 34rpx;
+}
+.aside>view text{
+  font-size: 34rpx;
+  color: #4a4a4a;
+  vertical-align: middle;
+}
+.aside>view image{
+  width: 52rpx;
+  height: 52rpx;
+  margin-right: 24rpx;
+  vertical-align: middle;
+}
+.aside>view view{
+  height: 52rpx;
+  float: right;
+  text-align: right;
+  color:#b0b0b0;
+  font-size: 30rpx;
+}
+.aside>view view text{
+  color: #b0b0b0;
+  font-size: 30rpx;
+}
+.aside>view view .iconfont{
+  color: #939393;
+}

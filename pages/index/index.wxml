@@ -1,0 +1,73 @@
+<wxs module="filter" src="../../filter/filter.wxs"></wxs>
+<!--index.wxml-->
+<view class="container my-container">
+
+  <!-- 菜品列表 -->
+  <view class='scroll-box'>
+    <scroll-view class="list-box" scroll-y="true" scroll-with-animation="true" scroll-into-view="{{scrollToId}}">
+      <view class='search-box' bindtap='search'>
+        <input class='search-input' placeholder='请输入菜名搜索' focus="false" confirm-type='search' disabled='true'></input>
+        <text class='iconfont icon-sousuo search'></text>
+      </view>
+      <view class='list-item' wx:for="{{mainList}}" wx:for-item="main" wx:for-index="mainIndex" id="{{'id'+main.menuCateId}}" wx:if='{{main.goods.length>0}}'>
+        <view class='clearfix'></view>
+        <view class='list-title'>
+          <view class='line'></view>
+          <text>{{main.menuName}}</text>
+          <view class='line'></view>
+        </view>
+        <view class='product-box' wx:for="{{main.goods}}" wx:for-item="item" wx:for-index="index">
+          <view class='product' bindtap='prodcutDetail' data-mainindex="{{mainIndex}}" data-productindex="{{index}}">
+            <view class='product-item'>
+              <image wx:if='{{item.picture!=""}}' src='{{item.picture}}' class='product-img' lazy-load='true'></image>
+              <text wx:if='{{item.picture == ""}}' class='iconfont product-img icon-zanwushuju'></text>
+              <view class='text-box'>
+                <text class='product-title'>{{item.name}}</text>
+                <text>￥{{filter._toFixed(item.price,2)}}</text>
+                <text class='iconfont icon-jia' catchtap='addOne' data-mainindex="{{mainIndex}}" data-productindex="{{index}}"></text>
+              </view>
+            </view>
+            <text class='select-num' wx:if="{{item.buyNum>0}}">{{item.buyNum}}</text>
+          </view>
+        </view>
+      </view>
+      <text class='common-info'>芒极科技提供技术支持</text>
+    </scroll-view>
+  </view>
+
+  <!-- 菜品导航 -->
+  <view class='navs-box {{showNav?"show":""}}'>
+    <view class='nav-btn' bindtap='toggleNav'>
+      <text class='iconfont icon-liebiao' style='color:#666;font-size:48rpx;'></text>
+      <text>菜单</text>
+    </view>
+    <scroll-view scroll-y="true" class='nav-list' scroll-into-view="{{navScroll}}">
+      <view class='nav-list-title' id='nav-top'>
+        <text>菜单</text>
+      </view>
+      <view class='nav-item {{activeIndx==nav.menuCateId?"active":""}}' wx:for='{{navList}}' wx:for-item="nav" wx:for-index="index" bindtap='goToScroll' data-id="{{nav.menuCateId}}">
+        <text>{{nav.menuName}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 模态框 -->
+  <view class='layout' hidden='{{!showNav}}' bindtap='toggleNav'></view>
+
+  <!-- 头部 -->
+  <!-- <view class='header'>
+    <text>{{shopName}}</text>
+  </view> -->
+
+  <!-- 底部导航 -->
+  <!-- <view class='bottom-nav'>
+    <view class='nav nav-50' catchtap='goToMyOrder'>
+      <text class='iconfont icon-jiesuanqingdan' style='color:#666;font-size:36rpx;'></text>
+      <text>我的订单</text>
+    </view>
+    <view class='nav nav-50' bindtap='goToShopCar'>
+      <text class='iconfont icon-gouwuche' style='color:#666;font-size:36rpx;'></text>
+      <text>购物车</text>
+    </view>
+  </view>
+  <view class='bottom-nav-first' hidden='{{showBottomNavFirst}}'></view> -->
+</view>

@@ -1,0 +1,54 @@
+<!--pages/user/user.wxml-->
+<view class='user'>
+  <view class='info'>
+    <image src='{{userInfo.avatarUrl}}'></image>
+    <text class='name'>{{userInfo.nickName}}</text>
+    <view>
+      <text>当前积分：</text><text class='font-black'>{{point}}</text><text>分，</text>
+      <text>点此查看</text>
+      <navigator url="/pages/integralRule/integralRule">
+        <text class='font-black line'>积分规则</text>
+      </navigator>
+    </view>
+  </view>
+  <view class='aside'>
+    <view>
+      <navigator url="/pages/integralMall/integralMall">
+        <image src='/images/user_1.png'></image>
+        <text>积分商城</text>
+        <view>
+          <text class='iconfont icon-you'></text>
+        </view>
+      </navigator>
+    </view>
+    <view>
+      <navigator url="/pages/historyOrder/historyOrder">
+        <image src='/images/user_2.png'></image>
+        <text>历史订单</text>
+        <view>
+          <text>{{orderNumber}}</text>
+          <text class='iconfont icon-you'></text>
+        </view>
+      </navigator>
+    </view>
+    <view bindtap='callPhone'>
+      <image src='/images/user_3.png'></image>
+      <text>电话预约</text>
+      <view>
+        <text>{{mobileNo}}</text>
+        <text class='iconfont icon-you'></text>
+      </view>
+    </view>
+  </view>
+  <view class='aside'>
+    <view>
+      <navigator url='/pages/userInfo/userInfo'>
+        <image src='/images/user_4.png'></image>
+        <text>个人信息</text>
+        <view>
+          <text class='iconfont icon-you'></text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

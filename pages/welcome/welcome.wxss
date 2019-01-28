@@ -1,0 +1,25 @@
+/* pages/welcome/welcome.wxss */
+.shop-info{
+  font-size: 28rpx;
+  text-align: center;
+}
+.shop-info .iconfont{
+  display: block;
+  margin-top: 20rpx;
+}
+.go-next{
+  width: 300rpx;
+  background-color: #ff2856;
+  color: #fff;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 200rpx;
+}
+.bigfont{
+  font-size: 32rpx;
+  font-weight: bold;
+}

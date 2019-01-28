@@ -1,0 +1,37 @@
+/* pages/exchangeSuccess/exchangeSuccess.wxss */
+.main{
+  text-align: center;
+  padding-top: 100rpx;
+}
+.main image{
+  display: block;
+  margin: 0 auto;
+  width: 97rpx;
+  height: 102rpx;
+}
+.info{
+  margin: 40rpx 0;
+  font-size: 30rpx;
+  color: #666;
+  display: block;
+}
+.btn{
+  display: inline-block;
+  width: 160rpx;
+  height: 56rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24rpx;
+  border-radius: 28rpx;
+  margin-right: 40rpx;
+  line-height: 54rpx;
+}
+.left{
+  border: solid 2rpx #ff2856;
+  color: #ff2856;
+}
+.right{
+  background-color: #ff2856;
+  border: solid 2rpx #ff2856;
+  color: #fff;
+}

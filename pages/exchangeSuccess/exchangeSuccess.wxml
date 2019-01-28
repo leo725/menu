@@ -1,0 +1,9 @@
+<!--pages/exchangeSuccess/exchangeSuccess.wxml-->
+<view class='main'>
+  <image src='/images/icon.png'></image>
+  <text class='info'>兑换成功！可到门店进行领取</text>
+  <view class='btn-box'>
+    <text class='btn left' bindtap='goBack'>返回商城</text>
+    <text class='btn right' bindtap='goOrder'>查看订单</text>
+  </view>
+</view>

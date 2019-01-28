@@ -1,0 +1,59 @@
+<wxs module="filter" src="../../filter/filter.wxs"></wxs>
+<!--结账-->
+<view class='settle'>
+  <view class='main'>
+    <view class='order'>
+      <text class='desk'>{{payTableId}}桌</text>
+      <text class='money red'>{{filter._toFixed(moneyTotal,2)}}</text>
+      <text class='red'>元</text>
+    </view>
+    <view class='detail'>
+      <view>
+        <text class="bigfont">合计：{{orderLists.length}}项</text>
+        <view class='right orderdetail' bindtap='toggleLists'>
+          <text class='red'>订单详情</text>
+          <text class='iconfont {{showLists?"icon-shang":"icon-xia"}}' style='font-size:38rpx;color:#ff2856;'></text>
+        </view>
+      </view>
+      <view class='list' wx:if="{{showLists}}">
+        <view wx:for="{{orderLists}}">
+          <text class='left'>{{item.name}}</text>
+          <text class='center'>{{item.num}}份</text>
+          <text class='right'>￥{{filter._toFixed(item.goodsPrice*item.num,2)}}</text>
+        </view>
+      </view>
+      <view>
+        <text>消费金额</text>
+        <text class='right'>{{filter._toFixed(moneyTotal,2)}}</text>
+      </view>
+      <view>
+        <text class="bigfont">应付金额</text>
+        <text class='red right bigfont'>￥{{filter._toFixed(moneyTotal,2)}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <text class='iconfont icon-zhifu' style='font-size:200rpx;color:#aaa;'></text>
+    <text>店家暂未开通在线支付</text>
+    <text>请到收银台付款</text>
+  </view>
+</view>
+
+
+<!-- 头部 -->
+<!-- <view class='header'>
+  <text class='goback iconfont icon-zuo' bindtap='goToMyOrder'></text>
+  <text>{{shopName}}</text>
+</view> -->
+
+<!-- 底部导航 -->
+ <view class='bottom-nav'>
+  <view class='nav nav-50' catchtap='goToIndex'>
+    <image src='/images/tab1.png'></image>
+    <text>继续点菜</text>
+  </view>
+  <view class='nav nav-50' catchtap='goToMyOrder'>
+    <image src='/images/tab3.png'></image>
+    <text>我的订单</text>
+  </view>
+</view> 

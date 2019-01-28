@@ -1,0 +1,58 @@
+/* pages/historyOrder/historyOrder.wxss */
+
+.history {
+  padding: 24rpx;
+}
+
+.main {
+  margin-bottom: 24rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  height: 280rpx;
+  box-shadow: 0px 2px 16px 0px rgba(234, 234, 234, 0.75);
+  padding-top: 23rpx;
+  font-size: 28rpx;
+  padding-bottom: 56rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #333;
+  text-align: center;
+  margin-bottom: 36rpx;
+}
+
+.info {
+  padding: 0 24rpx;
+  width: 100%;
+  padding-bottom: 56rpx;
+}
+
+.info .left {
+  display: inline-block;
+}
+
+.info .left:first-child {
+  width: 291rpx;
+}
+
+.right {
+  width: auto;
+  float: right;
+}
+.nomore{
+  text-align: center;
+  padding: 24rpx 0;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.nodata{
+  text-align: center;
+  font-size: 32rpx;
+  color: #999;
+  padding-top: 200rpx;
+}
+.nodata .iconfont{
+  display: block;
+}

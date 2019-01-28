@@ -1,0 +1,7 @@
+<!--pages/integralRule/integralRule.wxml-->
+<view class='rule'>
+  <text>1.积分获取: 消费1元积累1积分；</text>
+  <text>2.积分有效期:永久有效;</text>
+  <text>3.积分兑换: 会员账户内的积分可用于兑换相应礼品，进入【积分商城】即可直接兑换;</text>
+  <text>4.说明: 积分兑换申请一经提交, 一律不能取消(除礼品缺货等特殊情况)。"</text>
+</view>

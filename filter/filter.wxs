@@ -1,0 +1,54 @@
+var filter = {
+  /**
+   * 保留小数位数
+   */
+  _toFixed: function(text, num) {
+    var str = null;
+    var zero = '10000000000000000000';
+    !num ? num = 2 : parseInt(num);
+    var amount = parseInt(zero.substring(0, num + 1));
+    if (text != undefined || text != '' || text != null) {
+      str = ((text * amount).toFixed(0) / amount).toFixed(num);
+      return isNaN(str) ? 0 : str;;
+    }
+  },
+  /**
+   * 获取小时分钟
+   */
+  _getHHMM: function(time) {
+    if (time == '') return;
+    var date = getDate(time);
+    var HH = date.getHours();
+    var mm = date.getMinutes();
+    if (mm < 10) {
+      mm = '0' + mm;
+    }
+    if (HH < 10) {
+      HH = '0' + HH;
+    }
+    return HH + ':' + mm;
+  },
+  /**
+   * 获取小时分钟
+   */
+  _getDate: function(time) {
+    if (time == '') return;
+    var date = getDate(time);
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    if (month < 10) {
+      month = '0' + month;
+    }
+    if (day < 10) {
+      day = '0' + day;
+    }
+    return year + '-' + month + '-' + day;
+  }
+}
+
+module.exports = {
+  _toFixed: filter._toFixed,
+  _getHHMM: filter._getHHMM,
+  _getDate: filter._getDate
+}

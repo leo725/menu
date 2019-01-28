@@ -1,0 +1,10 @@
+/* pages/integralRule/integralRule.wxss */
+.rule{
+  padding: 50rpx 24rpx;
+}
+.rule text{
+  line-height: 42rpx;
+  color: #333;
+  font-size: 28rpx;
+  display: block;
+}

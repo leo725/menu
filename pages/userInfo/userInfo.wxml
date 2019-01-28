@@ -1,0 +1,33 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class='userinfo'>
+  <view class='info'>
+    <image src='{{userInfo.avatarUrl}}'></image>
+    <text class='name'>{{userInfo.nickName}}</text>
+  </view>
+  <view class='main'>
+    <text>我的性别</text>
+    <view class='right' wx:if="{{!changeSex}}" bindtap='changeSexFun'>
+      <text>{{checked==2?'女':'男'}}</text>
+      <text class='iconfont icon-you'></text>
+    </view>
+    <view class='right' wx:if="{{changeSex}}">
+      <radio-group bindchange='radioChange'>
+        <label class="radio">
+          <radio value="1" checked="{{item.checked}}" />男
+        </label>
+        <label class="radio">
+          <radio value="2" checked="{{item.checked}}" />女
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <picker mode="date" value="{{birthday}}" end="{{endDate}}" bindchange="changeBirthday">
+    <view class="main">
+      <text>我的生日</text>
+      <view class='right'>
+        <text>{{birthday=='no'?'':birthday}}</text>
+        <text class='iconfont icon-you'></text>
+      </view>
+    </view>
+  </picker>
+</view>

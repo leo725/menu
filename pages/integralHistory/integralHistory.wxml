@@ -1,0 +1,27 @@
+<!--pages/integraHistory/integraHistory.wxml-->
+<view class='container1' wx:if="{{orderList.length>0}}">
+  <view class='main' wx:for="{{orderList}}" wx:for-item="item" wx:for-index="index">
+    <image src='{{item.picture}}'></image>
+    <view class='box'>
+      <view>
+        <text class='title'>{{item.name}}</text>
+        <text class='right'>x{{item.num}}</text>
+      </view>
+      <view>
+        <text class='orderno'>订单号：{{item.orderNo}}</text>
+      </view>
+      <view class='others'>
+        <text>{{item.commodityPrice}}分</text>
+        <text class='type-ydh type' wx:if="{{item.state == 'paid'}}">已兑换</text>
+        <text class='type-wdh type' wx:if="{{item.state == 'unpaid'}}">未兑换</text>
+      </view>
+    </view>
+  </view>
+  <view class='nomore' wx:if="{{nomore}}">
+    <text>没有更多数据了</text>
+  </view>
+</view>
+<view class='nodata' wx:if="{{orderList.length<=0}}">
+  <text class='iconfont icon-zanwushuju' style='color:#999;font-size:400rpx;'></text>
+  <text>暂无积分兑换记录</text>
+</view>

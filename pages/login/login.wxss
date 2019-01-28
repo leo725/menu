@@ -1,0 +1,104 @@
+/* pages/login/login.wxss */
+
+.login {
+  width: 100%;
+  padding: 40rpx 20rpx;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 30rpx;
+  padding-top: 20rpx;
+  padding-bottom: 50rpx;
+  overflow: hidden;
+  height: 100%;
+}
+
+.shop {
+  font-size: 28rpx;
+  border: 1rpx solid #eee;
+  margin: 0 40rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 50rpx;
+  box-shadow: 0px 3px 0px 0px rgba(100, 0, 0, 0.2);
+  margin-bottom: 30rpx;
+}
+
+.shop-name {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 36rpx;
+  line-height: 80rpx;
+  margin: 0 40rpx;
+  border-bottom: 1rpx solid #ff2856;
+  box-shadow: 0px 3px 0px 0px rgba(100, 100, 100, 0.1);
+}
+
+.select-container {
+  font-size: 28rpx;
+  overflow: hidden;
+  padding-right: 20rpx;
+}
+
+.select-info {
+  display: block;
+  color: #ff2856;
+  margin: 30rpx 0;
+}
+
+.select-item {
+  width: 25%;
+  float: left;
+  padding-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.select-item.active text {
+  color: #fff;
+  background-color: #ff2856;
+}
+
+.select-item text {
+  display: block;
+  border: 1rpx solid #eee;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+}
+
+.others {
+  font-size: 28rpx;
+  text-align: left;
+  margin: 20rpx 40rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.bottom-btn {
+  text-align: center;
+  font-size: 32rpx;
+  margin-top: 80rpx;
+}
+
+.bottom-btn text {
+  display: inline-block;
+  width: 300rpx;
+  background-color: #ff2856;
+  color: #fff;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+}
+
+.root-btn {
+  width: 300rpx;
+  background-color: #ff2856;
+  color: #fff;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+}

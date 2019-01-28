@@ -1,0 +1,103 @@
+/* pages/search/search.wxss */
+.search{
+  padding: 20rpx;
+  font-size: 28rpx;
+  width: 100%;
+}
+.search-input{
+  box-sizing: border-box;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 1rpx solid #eee;
+  border-radius: 40rpx;
+  background-color: #fff;
+  padding: 0 60rpx;
+}
+.mainbox{
+  margin-top: 40rpx;
+  width: 100%;
+  background-color: #fff;
+}
+.itembox{
+  overflow: hidden;
+  padding: 24rpx 31rpx;
+  border-top: 1rpx dashed #eee;
+}
+.mainbox view:first-child .itembox{
+  border: 0;
+}
+.itembox image{
+  float: left;
+  width: 162rpx;
+  height: 162rpx;
+  border-radius: 10rpx;
+}
+.itembox>view{
+  float: left;
+  height: 160rpx;
+  width: 480rpx;
+  padding-left: 24rpx;
+}
+.title{
+  font-size: 32rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 22rpx;
+}
+.price{
+  font-size: 28rpx;
+  color: #999;
+}
+.search-box{
+  position: relative;
+  width: 100%;
+}
+.search-box .iconfont{
+  position: absolute;
+  top: 24rpx;
+  left: 20rpx;
+  z-index: 1;
+  color: #999;
+}
+.addCar{
+  height: 60rpx;
+}
+.addCar .iconfont{
+  font-size: 28rpx;
+  display: inline-block;
+  width: 36rpx;
+  height: 36rpx;
+  border:2rpx solid #ff2856;
+  text-align: center;
+  line-height: 36rpx;
+  border-radius: 50%;
+  margin-top: 24rpx;
+}
+.num{
+  display: inline-block;
+  color: #666;
+  width: 56rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.addCar .icon-jian{
+  color: #ff2856;
+}
+.addCar .icon-jia{
+  color: #fff;
+  background-color: #ff2856;
+}
+.addCar-btn{
+  font-size: 26rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 180rpx;
+  border-radius: 30rpx;
+  color: #fff;
+  float: right;
+  background-color: #ff2856;
+  text-align: center;
+}

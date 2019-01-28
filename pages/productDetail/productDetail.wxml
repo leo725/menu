@@ -1,0 +1,29 @@
+<wxs module="filter" src="../../filter/filter.wxs"></wxs>
+<!--pages/productDetail/productDetail.wxml-->
+<view class='main-container'>
+  <view class='product-detail'>
+    <image src='{{detail.picture}}' class="imgs"></image>
+    <view class='product-info'>
+      <text class='title'>{{detail.name}}</text>
+      <text class='price'>￥ {{filter._toFixed(detail.price,2)}}/份</text>
+    </view>
+    <view class='detil-label' wx:if="{{detail.label!=''}}">{{detail.remark}}</view>
+    <!-- <text class='goback' bindtap='goBack'>返回</text> -->
+  </view>
+  <text class='common-info'>芒极科技提供技术支持</text>
+</view>
+<view class='bottom-box'>
+  <text>数量</text>
+  <view class='add-or-minus'>
+    <text class='iconfont icon-jian' style='font-size:36rpx;color:#ff2856;' bindtap='minus'></text>
+    <text class='num'>{{num}}份</text>
+    <text class='iconfont icon-jia' style='font-size:36rpx;color:#ff2856;' bindtap='add'></text>
+  </view>
+  <text class='add-car' bindtap='addCar'>加入购物车</text>
+</view>
+
+<!-- 头部 -->
+<!-- <view class='header'>
+  <text class='goback iconfont icon-zuo' bindtap='goBack'></text>
+  <text>{{shopName}}</text>
+</view> -->

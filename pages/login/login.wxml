@@ -1,0 +1,30 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+  <view class='main'>
+    <view class='shop'>
+      <text>欢迎光临，</text>
+      <text class='shop-name'>{{shopName}}</text>
+    </view>
+    <view class='title'>
+      <text>用餐人数</text>
+    </view>
+    <view class='select-container'>
+      <text class='select-info'>请选择正确的用餐人数</text>
+      <view class='select-item {{selectedIndex==index?"active":""}}' wx:for="{{numberArray}}" wx:for-item="item" wx:for-index="index">
+        <text bindtap='selectFun' data-index="{{index}}">{{item}}人</text>
+      </view>
+    </view>
+    <view class='others'>
+      <input placeholder="请输入您的口味要求、忌口等（可不填）" value="{{otherInfo}}"></input>
+    </view>
+    <view class='bottom-btn'>
+      <text bindtap='goToIndex'>开始点菜</text>
+    </view>
+    <text class='common-info'>芒极科技提供技术支持</text>
+  </view>
+
+</view>
+<!-- 头部 -->
+<!-- <view class='header'>
+  <text>{{shopName}}</text>
+</view> -->

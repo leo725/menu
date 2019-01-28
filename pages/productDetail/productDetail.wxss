@@ -1,0 +1,74 @@
+/* pages/productDetail/productDetail.wxss */
+.main-container{
+  padding-bottom: 108rpx;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.product-detail{
+  position: relative;
+  background-color: #fff;
+}
+.imgs{
+  width: 100%;
+  min-height: 600rpx;
+}
+.product-info{
+  font-size: 36rpx;
+  padding:20rpx;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx dashed #eee;
+  background-color: #fff;
+}
+.price{
+  display: block;
+  color: #ff2856;
+  margin:20rpx 0;
+}
+/* 底部 */
+.bottom-box{
+  position: fixed;
+  bottom: 0;
+  font-size: 28rpx;
+  width: 100%;
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  border-top: 1rpx solid #eee;
+  line-height: 66rpx;
+}
+.add-or-minus{
+  display: inline-block;
+  padding-left:30rpx;
+}
+.add-or-minus text{
+  height: 66rpx;
+  display: inline-block;
+  border:1rpx solid #eee;
+  vertical-align: middle;
+  padding:0 20rpx;
+}
+.add-or-minus .num{
+  border-left: 0rpx;
+  border-right: 0rpx;
+}
+.add-car{
+  color: #fff;
+  background-color: #ff2856;
+  height: 66rpx;
+  width: 200rpx;
+  border-radius: 33rpx;
+  line-height: 66rpx;
+  text-align: center;
+  vertical-align: middle;
+  float: right;
+}
+.detil-label{
+  font-size:28rpx;
+  display:block;
+  line-height:48rpx;
+  padding:20rpx;
+  color:#666;
+}
+.common-info{
+  margin-top: 40rpx;
+}

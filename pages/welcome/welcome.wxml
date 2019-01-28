@@ -1,0 +1,16 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='welcome'>
+  <view class='shop-info'>
+    <text class='iconfont icon-welcome' style='font-size:600rpx;color:#ff2856;'></text>
+    <text class='bigfont'>{{shopName}}，</text>
+    <text class='other'>欢迎您光临！</text>
+  </view>
+  <text class='go-next' bindtap='goNext' wx:if="{{hasRooted}}" >开始点菜</text>
+  <button class='go-next' open-type="getUserInfo" bindgetuserinfo='getUserInfo' wx:if="{{!hasRooted}}" >授权并点菜</button>
+  <text class='common-info'>芒极科技提供技术支持</text>
+</view>
+
+<!-- 头部 -->
+<!-- <view class='header'>
+  <text>{{shopName}}</text>
+</view> -->
